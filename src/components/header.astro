@@ -1,0 +1,27 @@
+---
+const siteName = Astro.props.siteName;
+const links = [
+  { href: "/", label: "トップ" },
+  { href: "/about", label: "アバウト" },
+  { href: "/contact", label: "お問合せ" },
+];
+---
+
+<header class="header">
+  <p>{siteName}</p>
+  <ul>
+    {
+      links.map((item) => (
+        <li>
+          <a href={item.href}>{item.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</header>
+
+<style>
+  .header {
+    background-color: blanchedalmond;
+  }
+</style>

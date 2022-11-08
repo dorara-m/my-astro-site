@@ -1,4 +1,7 @@
 ---
+import Header from "../components/header.astro";
+const title = "トップページ";
+const siteName = "どうてらのさいと";
 ---
 
 <html lang="en">
@@ -7,9 +10,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{title}</title>
   </head>
   <body>
-    <h1>Hello</h1>
+    <Header siteName={siteName} />
+    <h1>{title}</h1>
   </body>
 </html>
+
+<style>
+  h1 {
+    font-size: 2rem;
+  }
+</style>
